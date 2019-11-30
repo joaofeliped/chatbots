@@ -1,0 +1,60 @@
+curl -X POST -H "Content-Type: application/json" -d '{
+  "get_started":{
+    "payload":"clicou_comecar"
+  }
+}' "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=EAAWfgYpnIAsBANjZCEe7GXe0nZCAxruR7fpK5Wuo715Jeb02km5Qsz3kkOPf5RmZAlxXkzdK9MzUTmHM8zQjbaAdQssp1UeeTTNngZA9uBGnwbNtSDNbsp0dVfrdIMYGKUOMIf1g8nDzo43C0HxZAM6Rrha0HwXbXFPUka1YMJk1sK3zIEuku"
+
+curl -X POST -H "Content-Type: application/json" -d '{
+  "setting_type":"greeting",
+  "greeting":{
+    "text":"Bem vindo ao bot protótipo do Grupo Moura."
+  }
+}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAWfgYpnIAsBANjZCEe7GXe0nZCAxruR7fpK5Wuo715Jeb02km5Qsz3kkOPf5RmZAlxXkzdK9MzUTmHM8zQjbaAdQssp1UeeTTNngZA9uBGnwbNtSDNbsp0dVfrdIMYGKUOMIf1g8nDzo43C0HxZAM6Rrha0HwXbXFPUka1YMJk1sK3zIEuku"
+
+
+curl -X POST -H "Content-Type: application/json" -d '{
+  "setting_type": "domain_whitelisting",
+  "whitelisted_domains":[
+    "https://www.mourafacil.com.br/",
+   ],
+   "domain_action_type": "add"
+}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAWfgYpnIAsBANjZCEe7GXe0nZCAxruR7fpK5Wuo715Jeb02km5Qsz3kkOPf5RmZAlxXkzdK9MzUTmHM8zQjbaAdQssp1UeeTTNngZA9uBGnwbNtSDNbsp0dVfrdIMYGKUOMIf1g8nDzo43C0HxZAM6Rrha0HwXbXFPUka1YMJk1sK3zIEuku"
+
+
+
+curl -X POST -H "Content-Type: application/json" -d '{
+  "persistent_menu":[
+    {
+      "locale":"default",
+      "composer_input_disabled":false,
+      "call_to_actions":[
+      	{
+          "title":"Abrir uma ocorrência",
+          "type":"postback",
+          "payload":"clicou_abrir_ocorrencia"
+        },
+        {
+          "title":"Ver ocorrências",
+          "type":"nested",
+          "call_to_actions":[
+            {
+              "title":"Recentes",
+              "type":"postback",
+              "payload":"ver_ocorrencias_recentes"
+            },
+            {
+              "title":"Por data",
+              "type":"postback",
+              "payload":"ver_ocorrencias_por_data"
+            },
+            {
+              "title":"Por ID",
+              "type":"postback",
+              "payload":"ver_ocorrencias_por_id"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}' "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=EAAByFjdumHcBAHKX5FkbTtoNsz6CLLuVdLqe0qGnA5UpaXdrDxbhRZB0FReqLZCX6xmih1RMnZAEZCTlMrx31dKYZCez1LMIWLw5AsDExBN04D42cSlg26ZCk2mMN9zb43cSoqqyP3K4cEqQN4X4pKbXwFW1tZB2Ou2pOrDCOOEtNdSZChyWtAao"

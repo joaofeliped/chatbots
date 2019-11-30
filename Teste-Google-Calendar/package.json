@@ -1,0 +1,21 @@
+{
+  "name": "siom-facebook-bot",
+  "version": "1.0.0",
+  "description": "Bot para facebook messenger do siom",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "João",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.0",
+    "consign": "^0.1.6",
+    "express": "^4.15.4",
+    "google-auth-library": "^0.11.0",
+    "googleapis": "^22.2.0",
+    "moment": "^2.18.1",
+    "request": "^2.81.0",
+    "string": "^3.3.3"
+  }
+}

@@ -1,0 +1,7 @@
+{
+	"connectionLimit": "100",
+	"host": "169.53.70.85",
+	"user": "root",
+	"password": "evo#admin#",
+	"database": "prd_siom"
+}
